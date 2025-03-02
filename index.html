@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<style>
+  .kakao-button {
+    display: block;
+    margin-bottom: 10px; /* 버튼 사이에 간격 추가 */
+  }
+</style>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaol  Kakao.init('870d540c9f655d6f87dde50911302f22'); // JavaScript 키
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '@𝗦𝗘 𝗞𝗢𝗥𝗘𝗔',
+        description: '명품(名品), 혁신(革新), 도약(跳躍)',
+        imageUrl: 'https://i.ibb.co/yF7QbHM2/SGN-03-01-2025-1740792188019.png',
+        link: {
+          mobileWebUrl: 'https://i.ibb.co/yF7QbHM2/SGN-03-01-2025-1740792188019.png',
+          webUrl: 'https://i.ibb.co/yF7QbHM2/SGN-03-01-2025-1740792188019.png',
+        }
+      },
+      buttons: [
+        {
+          title: '@𝗦𝗘 𝗞𝗢𝗥𝗘𝗔 바로가기',
+          link: {
+            mobileWebUrl: 'https://open.kakao.com/o/gUa2wnch',
+            webUrl: 'https://open.kakao.com/o/gUa2wnch',
+          },
+          style: {
+            display: 'block',
+            marginBottom: '10px'
+          }
+        },
+        {
+          title: '𝗦𝗘 𝗞𝗢𝗥𝗘𝗔 고객센터',
+          link: {
+            mobileWebUrl: 'https://open.kakao.com/o/ss8fI3ih',
+            webUrl: 'https://open.kakao.com/o/ss8fI3ih',
+          },
+          style: {
+            display: 'block',
+            marginBottom: '10px'
+          }
+        }
+      ]
+    });
+  }
+</script>
+</body>
+    </html>
